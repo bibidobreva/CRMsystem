@@ -20,4 +20,35 @@ public class Agent extends BaseEntity{
     private Long agentID;
 
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+
+    public Long getAgentID() {
+        return agentID;
+    }
+
+    public void setAgentID(Long agentID) {
+        this.agentID = agentID;
+    }
 }
