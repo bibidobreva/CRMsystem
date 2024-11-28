@@ -19,6 +19,9 @@ public class Agent extends BaseEntity{
     @Column(name = "agent_id")
     private Long agentID;
 
+    @Column
+    private int openedTickets;
+
 
     public String getFirstName() {
         return firstName;

@@ -2,7 +2,10 @@ package com.crm.CRMsystem.models.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+
+import java.util.List;
 
 @Table
 @Entity
@@ -26,8 +29,10 @@ public class Client extends BaseEntity{
     @Column(nullable = false)
     private String email;
 
-    @Column(nullable = false, name = "open_tickets")
-    private int openTickets;
+
+    @OneToMany
+    @Column
+    private List<Ticket> tickets;
 
     public String getUsername() {
         return username;
@@ -77,11 +82,5 @@ public class Client extends BaseEntity{
         this.email = email;
     }
 
-    public int getOpenTickets() {
-        return openTickets;
-    }
 
-    public void setOpenTickets(int openTickets) {
-        this.openTickets = openTickets;
-    }
 }
