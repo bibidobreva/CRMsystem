@@ -23,6 +23,9 @@ public class Agent extends BaseEntity{
     private int openedTickets;
 
 
+    @Column(nullable = false)
+    private String email;
+
     public String getFirstName() {
         return firstName;
     }
