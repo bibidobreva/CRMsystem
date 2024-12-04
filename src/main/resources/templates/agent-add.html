@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="bootstrap.min.css"/>
     <title>Add Agent</title>
 </head>
-<body>
+<body class="bg-success p-2" style="--bs-bg-opacity: .5;">
     <main>
-        <div>
-            <form>
-                <h3>Register new agent</h3>
+        <div class="position-absolute top-50 start-50 translate-middle" style="max-width: 500px; width: 100%;">
+            <form class="p-3 mb-2 bg-success text-white border border-5 border-success-subtle">
+                <h3 class="text-center">Register new agent</h3>
                 <div>
                     <label>Username</label>
 
@@ -35,8 +37,8 @@
                     th:value="">
                 </div>
 
-                <div>
-                    <button>Add agent</button>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-primary btn-lg btn-light">Add agent</button>
                 </div>
 
 
@@ -45,7 +47,7 @@
 
 
 
-            <div>
+            <div class="text-center mt-3 border border-5 border-success-subtle bg-success text-white">
                 <p>New Agent saveed in system</p>
                 <p>Password of the new agent is: </p>
             </div>

@@ -3,9 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <title>CRM - Email Management</title>
 </head>
-<body>
-    
+<body class="bg-success p-2" style="--bs-bg-opacity: .5;">
+
+    <div class="container-fluid"> <!-- Use container-fluid for full width -->
+        <!-- CRM Header -->
+        <div class="text-center mb-4">
+            <h3 class="text-white">CRM - Email Management</h3>
+        </div>
+
+        <!-- Form for CRM Email Management -->
+        <form class="p-3 mb-2 bg-success text-white border border-5 border-success-subtle">
+            <div class="row">
+                <!-- Customer Information Section -->
+                <div class="col-md-12 mb-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-header">
+                            <h5>Customer Information</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Name:</strong> John Doe</p>
+                            <p><strong>Email:</strong> johndoe@example.com</p>
+                            <p><strong>Account ID:</strong> 12345</p>
+                            <p><strong>Status:</strong> Active</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email List Section -->
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-header">
+                            <h5>Email List</h5>
+                        </div>
+                        <div class="card-body" style="max-height: 300px; overflow-y: auto;">
+                            <ul class="list-group">
+                                <li class="list-group-item">Customer A - Issue with Login</li>
+                                <li class="list-group-item">Customer B - Payment Inquiry</li>
+                                <li class="list-group-item">Customer C - Feature Request</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Thread Section -->
+                <div class="col-md-8 mb-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-header">
+                            <h5>Email Thread</h5>
+                        </div>
+                        <div class="card-body" style="max-height: 400px; overflow-y: auto;">
+                            <div class="email-message mb-3">
+                                <strong>Customer's Original Message:</strong>
+                                <p><strong>Subject:</strong> Issue with Login</p>
+                                <p><strong>Message:</strong> I am unable to log into my account. I’ve tried resetting my password but still no success. Please help!</p>
+                                <p><strong>Sent On:</strong> 2024-12-01 10:00 AM</p>
+                            </div>
+                            <div class="agent-response mb-3">
+                                <strong>Agent's Response:</strong>
+                                <p><strong>Message:</strong> Hello John, I’ve reset your password. Please check your inbox for the new password and try logging in again.</p>
+                                <p><strong>Sent On:</strong> 2024-12-01 10:30 AM</p>
+                            </div>
+                            <div class="agent-response mb-3">
+                                <strong>Agent's Response:</strong>
+                                <p><strong>Message:</strong> It looks like the issue may be due to browser caching. Please try clearing your cache and logging in again. Let me know if this works.</p>
+                                <p><strong>Sent On:</strong> 2024-12-01 11:00 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compose Email Section -->
+                <div class="col-md-12 mb-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-header">
+                            <h5>Compose Email</h5>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="emailSubject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="emailSubject" placeholder="Enter email subject" value="Re: Issue with Login">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailBody" class="form-label">Email Body</label>
+                                    <textarea class="form-control" id="emailBody" rows="5" placeholder="Write your email here..."></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailPriority" class="form-label">Priority</label>
+                                    <select class="form-select" id="emailPriority">
+                                        <option selected>Low</option>
+                                        <option>Medium</option>
+                                        <option>High</option>
+                                    </select>
+                                </div>
+                                <!-- Buttons for sending and solving case -->
+                                <button type="submit" class="btn btn-primary">Send</button>
+                                <button type="button" class="btn btn-success ms-2">Solve Case</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Notes Section -->
+                <div class="col-md-12">
+                    <div class="card bg-success text-white">
+                        <div class="card-header">
+                            <h5>Case Notes</h5>
+                        </div>
+                        <div class="card-body">
+                            <textarea class="form-control" rows="4" placeholder="Add notes about the case..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>
