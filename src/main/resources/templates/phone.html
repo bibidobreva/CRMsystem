@@ -4,8 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
 </head>
-<body>
-    
+<body class="bg-success p-2" style="--bs-bg-opacity: .5;">
+    <div class="container-fluid">
+        <!-- CRM Header -->
+        <div class="text-center mb-4">
+            <h3 class="text-white">CRM - Phone Support</h3>
+        </div>
+
+        <!-- Phone Support Section -->
+        <form class="p-3 mb-2 bg-success text-white border border-5 border-success-subtle">
+            <div class="row">
+                <!-- Customer Information Section -->
+                <div class="col-md-12 mb-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-header">
+                            <h5>Customer Information</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Name:</strong> John Doe</p>
+                            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+                            <p><strong>Email:</strong> johndoe@example.com</p>
+                            <p><strong>Account ID:</strong> 12345</p>
+                            <p><strong>Status:</strong> Active</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call Controls Section -->
+                <div class="col-md-12 mb-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-header">
+                            <h5>Call Controls</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <button type="button" class="btn btn-primary btn-lg">Answer Call</button>
+                            <button type="button" class="btn btn-danger btn-lg ms-3">End Call</button>
+                            <button type="button" class="btn btn-warning btn-lg ms-3">Hold Call</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call Details Section -->
+                <div class="col-md-12 mb-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-header">
+                            <h5>Call Details</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="callDuration" class="form-label">Call Duration</label>
+                                <input type="text" class="form-control" id="callDuration" value="00:00:00" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="callNotes" class="form-label">Call Notes</label>
+                                <textarea class="form-control" id="callNotes" rows="4" placeholder="Log any notes from the call..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Inquiry Section -->
+                <div class="col-md-12 mb-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-header">
+                            <h5>Customer Inquiry</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Issue:</strong> Customer is having trouble logging in.</p>
+                            <p><strong>Priority:</strong> Medium</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions Section -->
+                <div class="col-md-12">
+                    <div class="card bg-success text-white">
+                        <div class="card-header">
+                            <h5>Quick Actions</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <button type="button" class="btn btn-info btn-lg">Create Support Ticket</button>
+                            <button type="button" class="btn btn-primary btn-lg ms-3">Send Follow-up Email</button>
+                            <button type="button" class="btn btn-success btn-lg ms-3">Escalate Case</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
