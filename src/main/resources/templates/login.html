@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="bootstrap.min.css"/>
     <title>Login</title>
 </head>
-<body>
+<body class="bg-success p-2" style="--bs-bg-opacity: .5;">
     <main>
-        <div>
-            <form>
-                <h3>Login</h3>
+        <div class="position-absolute top-50 start-50 translate-middle" style="max-width: 500px; width: 100%;">
+            <form class="p-3 mb-2 bg-success text-white border border-5 border-success-subtle">
+                <h3 class="text-center">Login</h3>
 
-                <div>
-                    <label>Username</label>
+                <div class="form-floating mb-3">
+                    
 
-                    <input type="text" class="" id="" name="username" placeholder="Username"
-                    th:value="">
+                    <input type="email" class="form-control form-control-sm" id="floatingEmail" name="email" placeholder="example@email.com">
+                    <label for="floatingEmail">Email field</label>
                 </div>
 
-                <div>
+                <div class="form-floating mb-3">
 
 
-                    <label>Password</label>
 
-                    <input type="password" class="" id="" name="password" placeholder="Password"
-                    th:vlaue = "">
+                    <input type="password" class="form-control form-control-sm" id="floatingPassword" name="password" placeholder="Password">
+                    <label for="floatingPassword">Password field</label>
 
                 </div>
 
 
-                <p>Incorrect password or username</p>
+                <p class="text-danger small">Incorrect password or username</p>
 
-                <div>
-                    <button>Login</button>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-primary btn-lg btn-light">Login</button>
                 </div>
             </form>
         </div>
